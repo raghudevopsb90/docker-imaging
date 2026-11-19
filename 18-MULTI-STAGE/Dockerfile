@@ -7,8 +7,8 @@ RUN           unzip /tmp/frontend.zip
 RUN           npm install && npm run build
 
 
-FROM          docker.io/redhat/ubi10
-RUN           dnf install nginx -y
-COPY          --from=builder /app/out/ /usr/share/nginx/html/
-EXPOSE        80
-ENTRYPOINT    ["nginx", "-g", "daemon off;"]
+#FROM          docker.io/redhat/ubi10
+#RUN           dnf install nginx -y
+#COPY          --from=builder /app/out/ /usr/share/nginx/html/
+#EXPOSE        80
+#ENTRYPOINT    ["nginx", "-g", "daemon off;"]
